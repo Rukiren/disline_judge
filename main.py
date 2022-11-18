@@ -1,38 +1,18 @@
-from subprocess import call
+from system.compiler_c import cppCompiler
+from system.compiler_py import pythonCompiler
+from system.questionOut import questionOut
 
-test_path = "test.py"
-in_path = 'compile/in.txt'
-out_path = 'compile/out.txt'
-err_path = 'compile/err.txt'
-ans_path = 'compile/ans.txt'
+while True:
+    question = input('選擇題目:')
+    try:
+        questionOut(question=question)
+    except:
+        print("題目不存在")
+        break
+    test = input('選擇檔案路徑:')
+    language = input("選擇語言：\n1 = C/C++ \n2 = python\n")
 
-try:
-    call(['python3',test_path], 
-        stdin=(open(in_path)), 
-        stdout=(open(out_path, 'w')), 
-        stderr=(open(err_path, 'w')))
-except:
-    print('compile failed')
-    BrokenPipeError
-
-try:
-    with open(out_path) as f:
-        out = f.readlines()
-except:
-    print('output test can not be found')    
-
-with open(ans_path) as f:
-    ans = f.readlines()
-    
-
-if out == ans:
-    print("AC")
-else:
-    print('ans: ')
-    print(ans)
-    print("your output: ")
-    print(out)
-    with open(err_path) as f:
-        err = f.readline()
-    print(err)
-    
+    if language == '1':
+        cppCompiler(question=question, test=test)
+    elif language == "2" :
+        pythonCompiler(question=question, test=test)
