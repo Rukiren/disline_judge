@@ -25,15 +25,14 @@ def pythonCompiler(question, test):
     with open(ans_path) as f:
         ans = f.read()
         
-
+    err = None
     if out == ans:
-        print("AC")
+        state = "ac"
+        return state, ans, out, err
     else:
-        print('ans: ')
-        print(ans)
-        print("your output: ")
-        print(out)
+        state = "error"
         with open(err_path) as f:
             err = f.read()
-        print(err)
+        return state, ans, out, err
+        
         
