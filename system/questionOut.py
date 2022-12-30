@@ -1,6 +1,6 @@
 def printQuestion(question):
-    question_path = f'system/compile/{question}/questionText.txt'
-    examplequestion = f'system/compile/{question}/example.txt'
+    question_path = f'system/questions/{question}/questionText.txt'
+    examplequestion = f'system/questions/{question}/example.txt'
     ques_txt = None
     ques_test = None
     with open(question_path ,encoding="utf-8") as f:

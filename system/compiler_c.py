@@ -6,8 +6,8 @@ def cppCompiler(question, test):
     
     # 獲取相關路徑
     test_path = test
-    in_path = f'system/compile/{question}/.in'  # 正確輸入
-    ans_path = f'system/compile/{question}/.out'  # 正確輸出
+    in_path = f'system/questions/{question}/.in'  # 正確輸入
+    ans_path = f'system/questions/{question}/.out'  # 正確輸出
     out_path = f'system/test/out.txt'   # 測試檔案輸出結果
     err_path = f'system/test/err.txt'   # 測試檔案錯誤資訊
 
