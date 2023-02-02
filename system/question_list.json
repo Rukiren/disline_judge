@@ -1,0 +1,42 @@
+{
+    "1": [
+      {
+        "id" : "1",
+        "name": "test",
+        "status": "easy",
+        "alltest": "2",
+        "input" :[
+            {
+                "input1": "1",
+                "input2": "1"
+            }
+        ],
+        "output" : [
+            {
+                "output1": "1",
+                "output2": "1"
+            }
+        ]
+      }
+    ],
+    "2": [
+        {
+          "id" : "2",
+          "name": "test",
+          "status": "easy",
+          "alltest": "2",
+          "input" :[
+              {
+                  "input1": "1",
+                  "input2": "1"
+              }
+          ],
+          "output" : [
+              {
+                  "output1": "1",
+                  "output2": "1"
+              }
+          ]
+        }
+      ]
+}
